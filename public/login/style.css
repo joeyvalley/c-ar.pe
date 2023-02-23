@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 99vw;
+  height: 46px;
+  padding: 0px 10px 0px 10px;
+  margin: 0;
+  border-bottom: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  z-index: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+nav form {
+  height: 21px;
+  margin-top: 12px;
+  padding-left: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+nav button {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+#calendar {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+#login {
+  margin-top: 16px;
+  padding-right: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+.fake-link {
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.hover {
+  cursor: pointer;
+}
+
+#user-login {
+  border: 1px solid black;
+  width: 300px;
+  height: fit-content;
+  margin: 0 auto;
+  padding: 10px;
+  margin-top: calc(50% - 559px);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 12px 2px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+input[type=password] {
+  width: 100%;
+  padding: 12px 2px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+input[type=email] {
+  width: 100%;
+  padding: 12px 2px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}

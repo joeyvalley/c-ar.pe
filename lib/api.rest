@@ -54,3 +54,32 @@ Content-Type: application/json
 DELETE {{url}}/api/birthdays/remove/{{name}}
 
 ###
+
+@username = joeyvalley
+
+###
+# @name SEE_ALL_USERS
+GET {{url}}/users/all
+###
+
+###
+# @name CREATE_USER
+POST {{url}}/user/create
+Content-Type: application/json
+
+{
+  "name": {
+    "firstName": "Joseph",
+    "lastName": "Valle"
+  },
+  "email": "josephrvalle@gmail.com",
+  "username": "joeyvalley",
+  "password": "stunn1ngB@ll5",
+  "dateCreated": "02/23/2023",
+  "collection": []
+}
+###
+# @name DELETE_USER_BY_NAME
+DELETE {{url}}/user/delete/{{username}}
+
+###

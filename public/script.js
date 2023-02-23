@@ -39,7 +39,10 @@ form.addEventListener('submit', async (event) => {
   console.log(json);
 })
 
-// Add event listeners to the login to make it appear as a link, won't do anything for now.
+// Add event listeners to the login to make it appear as a link.
+login?.addEventListener('click', () => {
+  window.location.href = "/register";
+})
 login?.addEventListener('mouseover', () => {
   login.classList.add("fake-link");
 })
