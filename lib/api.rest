@@ -1,0 +1,64 @@
+# To use this file, insall the REST Client extension
+# vscode:extension/humao.rest-client
+
+# To switch environments:
+#  - Ctrl+Alt+E(Cmd+Alt+E for macOS)
+#  - Or `Rest Client: Switch Environment` from command palette
+
+# You'll need to switch to either `local` or `vercel` to get started.
+
+@url = http://localhost:8080
+@date = 07-25-1988
+@year = 1988
+@name = Josh Vale
+
+# @name INDEX
+GET {{url}}
+###
+
+# @name GET_BIRTHDAYS
+GET {{url}}/api/birthdays 
+###
+
+# @name SEARCH_BIRTHDAY_BY_DATE
+GET {{url}}/api/birthdays/search/date/{{date}}
+###
+
+# @name SEARCH_BIRTHDAY_BY_YEAR
+GET {{url}}/api/birthdays/search/year/{{year}}
+###
+
+# @name SEARCH_BIRTHDAY_BY_NAME
+GET {{url}}/api/birthdays/search/name/{{name}}
+###
+
+# @name ADD_BIRTHDAY_ENTRY
+POST {{url}}/api/birthdays/add
+Content-Type: application/json
+
+{
+  "date": "07/25",
+  "births": {
+    "name": "Josh Vale",
+    "year": 1988,
+    "description": "Division-1 Singer",
+    "extract": "Josh Vale, the Irish singer, was recruited to sing for the renowned Division I college, Johnson-McCormick University in Atlanta, Georgia, known for its rich tradition of promoting diversity and inclusivity. During his time there, he continued to impress audiences with his soulful performances and dynamic stage presence, earning him numerous accolades and solidifying his place as one of the most talented singers on campus.",
+    "link": "https://other-exotica.net",
+    "img": "https://avatars.githubusercontent.com/u/120593297?v=4"
+  }
+}
+###
+
+# @name UPDATE_ENTRY
+PATCH {{url}}/api/birthdays/edit/{{name}}
+Content-Type: application/json
+
+{
+  "link": "https://josh.sex"
+}
+###
+
+# @name DELETE_BIRTHDAY
+DELETE {{url}}/api/birthdays/remove/{{name}}
+
+###
