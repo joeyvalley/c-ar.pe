@@ -25,14 +25,9 @@ nav {
 nav form {
   height: 21px;
   margin-top: 12px;
-  padding: 0;
+  padding-left: 15px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
-}
-
-nav p {
-  margin-top: 12px;
-  padding: 0;
 }
 
 nav button {
@@ -41,6 +36,13 @@ nav button {
 }
 
 #calendar {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+#login {
+  margin-top: 16px;
+  padding-right: 25px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
 }

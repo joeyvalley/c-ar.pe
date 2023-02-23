@@ -10,15 +10,7 @@
 @url = http://localhost:8080
 @date = 07-25-1988
 @year = 1988
-@name = Josh Vale
-
-# @name INDEX
-GET {{url}}
-###
-
-# @name GET_BIRTHDAYS
-GET {{url}}/api/birthdays 
-###
+@name = Jamen Penis
 
 # @name SEARCH_BIRTHDAY_BY_DATE
 GET {{url}}/api/birthdays/search/date/{{date}}
@@ -39,11 +31,11 @@ Content-Type: application/json
 {
   "date": "07/25",
   "births": {
-    "name": "Josh Vale",
+    "name": "Jamen Penis",
     "year": 1988,
-    "description": "Division-1 Singer",
+    "description": "Raster Design",
     "extract": "Josh Vale, the Irish singer, was recruited to sing for the renowned Division I college, Johnson-McCormick University in Atlanta, Georgia, known for its rich tradition of promoting diversity and inclusivity. During his time there, he continued to impress audiences with his soulful performances and dynamic stage presence, earning him numerous accolades and solidifying his place as one of the most talented singers on campus.",
-    "link": "https://other-exotica.net",
+    "link": "https://wikipedia.org",
     "img": "https://avatars.githubusercontent.com/u/120593297?v=4"
   }
 }
@@ -54,7 +46,7 @@ PATCH {{url}}/api/birthdays/edit/{{name}}
 Content-Type: application/json
 
 {
-  "link": "https://josh.sex"
+  "link": "https://josh.ass"
 }
 ###
 
