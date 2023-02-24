@@ -7,7 +7,7 @@
     "morgan": "^1.10.0",
     "node": "^19.6.0"
   },
-  "name": "c-ar.pe",
+  "name": "carpe-diem-backend",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
