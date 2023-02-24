@@ -1,15 +1,19 @@
 {
   "type": "module",
   "dependencies": {
+    "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "mongoose": "^6.9.2",
+    "morgan": "^1.10.0",
     "node": "^19.6.0"
   },
   "name": "carpe-diem-backend",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prestart": "vercel env pull .env",
+    "start": "vercel dev",
+    "build": "node ./api/seeds/seed.js"
   },
   "keywords": [],
   "author": "",

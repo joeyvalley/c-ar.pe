@@ -1,5 +1,5 @@
 // Import model (ᅌᴗᅌ* )
-import Day from "./models/model.js";
+import Day from "../models/model.js";
 
 // Clear the database. (ᅌᴗᅌ* )
 // await Day.deleteMany();

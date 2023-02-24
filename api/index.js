@@ -1,8 +1,26 @@
-import express from "express"
-import router from "./api/routers/router.js";
+import express from 'express'
+import morgan from 'morgan'
+import lifecycle from './middleware/lifecycle.js'
+import router from "./routers/router.js"
 
-const app = express();
+const app = express()
 
-app.use(express.json());
+app.use(morgan('tiny'))
+app.use(lifecycle({
+  async setup() {
+    // This runs before all your handlers
+    // Put your database connection here. e.g.
+    // await mongoose.connect(process.env.DATABASE_URL)
+  },
+  async cleanup() {
+    // This runs after all your handlers
+    // Put your database disconnection here. e.g.
+    // await mongoose.disconnect()
+  }
+}))
+
+// Feel free to use a router and move this elsewhere.
 app.use(router);
-app.listen(8080, () => { console.log("Server is running on port 8080") });
+
+// Don't use app.listen. Instead export app.
+export default app

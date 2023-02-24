@@ -1,15 +1,10 @@
-/* 
-####################################################################
-#     Updates the database with today's Wikipedia articles.        #
-# This file should be configured to run daily at midnight to keep  #
-#                    the database up to date.                      #
-####################################################################
-*/
-
 // Import model. (ᅌᴗᅌ* )
-import Day from "./models/model.js";
+import "dotenv/config";
+import mongoose from "mongoose";
+import Day from "../models/model.js";
 
-
+mongoose.connect(process.env.DATABASE_URL);
+mongoose.set("strictQuery", true);
 
 // Get today's date. (ᅌᴗᅌ* ) 
 const today = new Date();
@@ -98,3 +93,5 @@ holidays.forEach(holiday => {
 
 // Add our entry to the database. (ᅌᴗᅌ* )
 await Day.create({ date: date, selections: selectionsJSON, births: birthsJSON, deaths: deathsJSON, events: eventsJSON, holidays: holidaysJSON });
+
+mongoose.disconnect(process.env.DATABASE_URL);

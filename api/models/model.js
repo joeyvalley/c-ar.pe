@@ -1,4 +1,4 @@
-import mongoose from "../connection.js";
+import mongoose from "mongoose";
 
 const holidaySchema = new mongoose.Schema({
   title: String,
