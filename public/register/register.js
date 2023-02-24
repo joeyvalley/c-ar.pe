@@ -1,3 +1,4 @@
+// @ts-nocheck
 const form = document.getElementById("login-form");
 
 form.addEventListener('submit', async (event) => {

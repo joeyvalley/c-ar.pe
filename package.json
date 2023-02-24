@@ -12,7 +12,8 @@
   "main": "index.js",
   "scripts": {
     "prestart": "vercel env pull .env",
-    "start": "vercel dev"
+    "start": "vercel dev",
+    "build": "node ./api/seeds/seedFullDb.js"
   },
   "keywords": [],
   "author": "",

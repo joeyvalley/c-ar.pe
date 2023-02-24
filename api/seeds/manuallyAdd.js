@@ -1,6 +1,4 @@
-/* 
-Use this to manually update the database with any tricky dates if the seeds.js file fails to catch all the days.
-*/
+// @ts-nocheck
 
 // Import model. (ᅌᴗᅌ* )
 import Day from "./models/model.js";

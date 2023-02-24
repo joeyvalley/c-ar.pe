@@ -1,3 +1,4 @@
+// @ts-nocheck
 // Import model. (ᅌᴗᅌ* )
 import "dotenv/config";
 import mongoose from "mongoose";

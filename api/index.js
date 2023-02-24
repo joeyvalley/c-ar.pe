@@ -1,3 +1,4 @@
+
 import mongoose from "mongoose"
 import express from 'express'
 import morgan from 'morgan'
@@ -10,7 +11,7 @@ app.use(morgan('tiny'))
 app.use(lifecycle({
   async setup() {
     mongoose.set('strictQuery', false)
-    //@ts-ignore
+    // @ts-ignore
     mongoose.connect(process.env.DATABASE_URL)
   },
   async cleanup() {
