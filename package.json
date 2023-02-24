@@ -7,13 +7,12 @@
     "morgan": "^1.10.0",
     "node": "^19.6.0"
   },
-  "name": "carpe-diem-backend",
+  "name": "c-ar.pe",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "prestart": "vercel env pull .env",
-    "start": "vercel dev",
-    "build": "node ./api/seeds/seed.js"
+    "start": "vercel dev"
   },
   "keywords": [],
   "author": "",
