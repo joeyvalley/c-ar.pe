@@ -36,6 +36,26 @@ export async function showAllUsers(req, res) {
 }
 
 export async function createUser(req, res) {
+  const { name, email, username, password, dateCreated, collection } = req.body;
+  try {
+    const newUser = await User.create({
+      name: {
+        firstName: name.firstName,
+        lastName: name.lastName
+      },
+      email: email,
+      username: username,
+      password: password,
+      dateCreated: dateCreated,
+      links: []
+    })
+    res.json(newUser);
+  } catch (error) {
+    res.json("Failed to create user.")
+  }
+}
+
+export async function registerUser(req, res) {
   try {
     const newUser = await User.create({
       name: {

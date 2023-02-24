@@ -18,8 +18,9 @@ router.get('/api/search/', search)
 router.get("/birthdays", birthdays);
 
 router.get("/users/all", showAllUsers);
-router.get("/api/register/", createUser)
-router.delete("/user/delete/:username", deleteUser)
+router.get("/api/register/", createUser);
+router.post("/api/register/", createUser);
+router.delete("/user/delete/:username", deleteUser);
 
 router.use("/api/birthdays", birthsRouter);
 

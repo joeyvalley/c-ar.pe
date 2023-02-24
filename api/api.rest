@@ -64,7 +64,7 @@ GET {{url}}/users/all
 
 ###
 # @name CREATE_USER
-POST {{url}}/user/create
+POST {{url}}/api/register
 Content-Type: application/json
 
 {
@@ -75,7 +75,7 @@ Content-Type: application/json
   "email": "josephrvalle@gmail.com",
   "username": "joeyvalley",
   "password": "stunn1ngB@ll5",
-  "dateCreated": "02/23/2023",
+  "dateCreated": "2023-02-23T21:09:03.492+00:00",
   "collection": []
 }
 ###
