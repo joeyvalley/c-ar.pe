@@ -33,7 +33,7 @@ form.addEventListener('submit', async (event) => {
   event.preventDefault();
   const month = calendar.value.split("-")[1];
   const day = calendar.value.split("-")[2];
-  const searchURL = `http://localhost:8080/api/search/?month=${month}&day=${day}`;
+  const searchURL = `http://localhost:3000/api/search/?month=${month}&day=${day}`;
   const res = await fetch(searchURL);
   const json = await res.json();
   console.log(json);

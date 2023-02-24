@@ -6,7 +6,7 @@ import birthsRouter from "./birthsRouter.js"
 
 
 // Import controllers. ಠ_ಠ
-import { search, birthdays, login, showAllUsers, createUser, deleteUser } from "../controllers/controller.js";
+import { search, birthdays, login, showAllUsers, registerUser, createUser, deleteUser } from "../controllers/controller.js";
 
 const router = express.Router();
 
@@ -18,7 +18,7 @@ router.get('/api/search/', search)
 router.get("/birthdays", birthdays);
 
 router.get("/users/all", showAllUsers);
-router.get("/api/register/", createUser);
+router.get("/api/register/", registerUser);
 router.post("/api/register/", createUser);
 router.delete("/user/delete/:username", deleteUser);
 

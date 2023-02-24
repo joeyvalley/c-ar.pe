@@ -1,3 +1,4 @@
+import mongoose from "mongoose"
 import express from 'express'
 import morgan from 'morgan'
 import lifecycle from './middleware/lifecycle.js'
@@ -8,14 +9,12 @@ const app = express()
 app.use(morgan('tiny'))
 app.use(lifecycle({
   async setup() {
-    // This runs before all your handlers
-    // Put your database connection here. e.g.
-    // await mongoose.connect(process.env.DATABASE_URL)
+    mongoose.set('strictQuery', false)
+    //@ts-ignore
+    mongoose.connect(process.env.DATABASE_URL)
   },
   async cleanup() {
-    // This runs after all your handlers
-    // Put your database disconnection here. e.g.
-    // await mongoose.disconnect()
+    await mongoose.disconnect()
   }
 }))
 
