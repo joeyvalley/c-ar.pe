@@ -10,9 +10,6 @@ import { search, birthdays, login, showAllUsers, registerUser, createUser, delet
 
 const router = express.Router();
 
-router.use('/', express.static('public'));
-router.use("/login", express.static('public/login'));
-router.use("/register", express.static('public/register'));
 router.get('/api/login/', login)
 router.get('/api/search/', search)
 router.get("/birthdays", birthdays);
