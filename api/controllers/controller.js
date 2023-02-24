@@ -56,22 +56,23 @@ export async function createUser(req, res) {
 }
 
 export async function registerUser(req, res) {
-  try {
-    const newUser = await User.create({
-      name: {
-        firstName: req.query.first,
-        lastName: req.query.last
-      },
-      email: req.query.email,
-      username: req.query.user,
-      password: req.query.password,
-      dateCreated: new Date(),
-      links: []
-    })
-    res.json(newUser);
-  } catch (error) {
-    res.json("Failed to create user.")
-  }
+  res.json("hibitch");
+  // try {
+  //   const newUser = await User.create({
+  //     name: {
+  //       firstName: req.query.first,
+  //       lastName: req.query.last
+  //     },
+  //     email: req.query.email,
+  //     username: req.query.user,
+  //     password: req.query.password,
+  //     dateCreated: new Date(),
+  //     links: []
+  //   })
+  //   res.json(newUser);
+  // } catch (error) {
+  //   res.json("Failed to create user.")
+  // }
 }
 
 export async function deleteUser(req, res) {
