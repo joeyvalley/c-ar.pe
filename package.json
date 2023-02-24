@@ -9,7 +9,7 @@
   },
   "name": "carpe-diem-backend",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "api/index.js",
   "scripts": {
     "prestart": "vercel env pull .env",
     "start": "vercel dev",
