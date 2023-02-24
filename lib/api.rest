@@ -10,7 +10,7 @@
 @url = http://localhost:8080
 @date = 07-25-1988
 @year = 1988
-@name = Jamen Penis
+@name = Carl Andres
 
 # @name SEARCH_BIRTHDAY_BY_DATE
 GET {{url}}/api/birthdays/search/date/{{date}}
@@ -29,13 +29,13 @@ POST {{url}}/api/birthdays/add
 Content-Type: application/json
 
 {
-  "date": "07/25",
+  "date": "09/12",
   "births": {
-    "name": "Jamen Penis",
+    "name": "Carl Andres",
     "year": 1988,
-    "description": "Raster Design",
-    "extract": "Josh Vale, the Irish singer, was recruited to sing for the renowned Division I college, Johnson-McCormick University in Atlanta, Georgia, known for its rich tradition of promoting diversity and inclusivity. During his time there, he continued to impress audiences with his soulful performances and dynamic stage presence, earning him numerous accolades and solidifying his place as one of the most talented singers on campus.",
-    "link": "https://wikipedia.org",
+    "description": "Daemon Mailer",
+    "extract": "Loquacious mentus. ",
+    "link": "https://cnn.com",
     "img": "https://avatars.githubusercontent.com/u/120593297?v=4"
   }
 }
